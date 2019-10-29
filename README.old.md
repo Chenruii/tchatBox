@@ -35,3 +35,7 @@
     - Affcher un message s'il n'y en a aucun
     - Permettre l'envoi du message lorsqu'on appuie sur Entrer
 
+# step 5 Composant tiers : 
+- ajouter le support d'emoji au Tchat
+- https://github.com/tommoor/react-emoji-render 
+

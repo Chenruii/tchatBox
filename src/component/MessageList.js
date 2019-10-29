@@ -6,18 +6,23 @@ class MessageList extends React.Component{
         super (props);
         this.state = {
             message :'',
-            MessageList : [],
+            MessageList : [
+                {message: "text1"},
+                {message: "text2"},
+                {message: "text3"}
+            ],
         };
-
-       // this.componentDidMount() {
-
-        //}
-
     }
+    
     render() {
         return (
             <ul >
-                <MessageItem />
+                {this.state.MessageList.map((item,i) => (
+                    
+                   <MessageItem  message={item.message}/>
+                ))
+                }
+               
             </ul>
         );
     }
