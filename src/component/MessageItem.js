@@ -3,8 +3,12 @@ import React from 'react';
 class MessageItem extends React.Component {
   constructor(props){
     super(props);
+    this.state = {
+      message : ''
+    }
   }
-    render(){
+
+    render() {
         return(
             <li>{this.props.message}</li>
         );
@@ -13,4 +17,5 @@ class MessageItem extends React.Component {
 MessageItem.defaultProps ={
   MessageList: '@MessageList'
 };
+
 export default MessageItem;

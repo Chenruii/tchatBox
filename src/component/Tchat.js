@@ -4,6 +4,15 @@ import MessageBar from './MessageBar';
 
 
 class Tchat extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state ={
+            value :''
+        };
+       
+    }
+
     render() {
         return (
             <div>

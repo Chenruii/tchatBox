@@ -13,6 +13,16 @@ class MessageList extends React.Component{
             ],
         };
     }
+    addMessage = () => {
+        this.setState(state => {
+            const list = state.list.concat(state.message);
+
+            return{
+                list,
+                MessageList:'',
+            };
+        });
+    };
     
     render() {
         return (

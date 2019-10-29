@@ -39,3 +39,9 @@
 - ajouter le support d'emoji au Tchat
 - https://github.com/tommoor/react-emoji-render 
 
+# step 6 Redux :Premiee pas
+- ajouter la libs Redux au Tchat
+- passer à l'ajout du message en redux
+    - création de reducer
+    - ajout de l'action
+    - connexion des composant
