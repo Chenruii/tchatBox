@@ -1,39 +1,28 @@
 import React from 'react';
 
-class MessageBar extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            send: ''
-        };
-        this.handleChange  = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
+import { connect } from 'react-redux'
+import { addMessage, ADD_MESSAGE } from '../actions/message'
 
-    handleChange(event){
-        this.setState({message:event.target.message});
-    }
-    handleSubmit(event) {
-        event.preventDefault();
-    }
+let MessageBar = ({ dispatch })  => {
+    return (
+        <div>
+            <form>
+                <label>Nom:</label>
+                <input placeholder= 'your name' type='text'   id=''/>
+                <input placeholder= 'your message' type='text'  id='msg'/>
+                <br />
+                <button type="button"  value="Submit" onClick={event => {
+                    event.preventDefault()
+                    dispatch(addMessage(document.getElementById('msg').value))
+                    document.getElementById('msg').value =''
+                } }>Send</button>
+            </form>
+        </div>
+    );}
+
+    // methode connect
+    MessageBar = connect()(MessageBar)
+export default MessageBar
 
 
-    send = () => {
-        console.log('this.props.message',this.props.message)
-    }
 
-    render () {
-        return (
-            <div>
-                <form onSubmit={this.handleSubmit}>
-                    <label>Nom:</label>
-                    <input placeholder= 'your name' type='text' onChange={this.handleChange} />
-                    <input placeholder= 'your message' type='text' onChange={this.handleChange} />
-                    <br />
-                    <button type="button" onClick="{this.send}">Send</button>
-                </form>
-            </div>
-        ) 
-    }
-}
-export default MessageBar;
