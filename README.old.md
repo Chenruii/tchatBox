@@ -46,4 +46,21 @@
     - ajout de l'action
     - connexion des composant
 
- 
+ # STEP 7  Redux
+-   http://redux.js.org/
+-   Ajouter la librairie Redux au JoliChat
+-   Passer l'ajout de message en Redux
+    - Création du reducer
+    - Ajout de l'action
+    - Connexion des composants
+
+
+# STEP 8 l'asynchrone avec Redux
+-   Ajouter la librairie Redux Thunk au JoliChat
+-   Utilisez https://my-json-server.typicode.com/tlenclos/formationreact-
+fake-server/messages et le client http Axios
+-   Initialiser le chat avec des messages
+    - Créer trois actions :
+        - LOAD_MESSAGES_PENDING
+        - LOAD_MESSAGES_SUCCESS
+        - LOAD_MESSAGES_ERROR
