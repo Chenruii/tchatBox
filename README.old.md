@@ -55,12 +55,30 @@
     - Connexion des composants
 
 
-# STEP 8 l'asynchrone avec Redux
+# STEP 8 L'asynchrone avec Redux
 -   Ajouter la librairie Redux Thunk au Tchat
--   Utilisez https://my-json-server.typicode.com/tlenclos/formationreact-
-fake-server/messages et le client http Axios
+-   Utilisez https://my-json-server.typicode.com/tlenclos/formationreact-fake-server/messages et le client http Axios
 -   Initialiser le chat avec des messages
     - Créer trois actions :
         - LOAD_MESSAGES_PENDING
         - LOAD_MESSAGES_SUCCESS
         - LOAD_MESSAGES_ERROR
+
+# STEP 9 React- Router
+-   Créer un middleware Redux permettant de logger toutes les actions Redux de votre chat dans la console
+
+# STEP 10 Redux Middleware 
+-  Ajouter une page de  "login" permettant d'entrer son username
+
+# STEP 11 Containers
+-   Séparer le composant MessageList en deux composants :
+    - Un container qui gère la liaison avec Redux
+    - Un composant de présentation avec essentiellement du JSX / CSS
+
+
+# STEP FiNALISATION Temps réel avec Websocket
+-   Utiliser un serveur node avec WebSocket
+-   Ce qu'il faut faire
+    - Créer un service accéder à la connexion WebSocket ./service/websocket.js
+    - Ce service connecte se connecte au serveur websocket et dispatch une action lorsqu'il reçoit un nouveau message
+    - Les actions sont partagées sur le réseau, notre tchat est en ligne !
