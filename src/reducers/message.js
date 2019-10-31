@@ -15,17 +15,16 @@ const INITIAL_STATE = {
     return {
     entities: [...state.entities, {message: action.message}]
     }
+    case 'GET_MESSAGES_PENDING':
+        return Object.assign({}, state, {loading : true});
+    case 'GET_MESSAGES_SUCCESS':
+        return Object.assign({}, state, {loading : true});
+    case 'GET_MESSAGES_ERROR':
+        return Object.assign({}, state, {loading : true});
     default:
     return state
     }
     }
-    
-    
-
-
-
-
-
 const reducers = combineReducers({
 messages,
 })
