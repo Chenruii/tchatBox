@@ -1,4 +1,5 @@
 import React from 'react';
+import Emoji from 'react-emoji-render';
 
 class MessageItem extends React.Component {
   constructor(props){
@@ -10,7 +11,11 @@ class MessageItem extends React.Component {
 
     render() {
         return(
-            <li>{this.props.message}</li>
+          <div>
+            <small>{this.props.message}</small>
+            <br />
+            <Emoji text={this.props.message} />
+          </div>            
         );
     };
 }
