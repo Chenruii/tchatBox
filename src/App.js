@@ -27,7 +27,7 @@ function App() {
       </nav>
       <switch>
         <Route path="/" exact> <Login /></Route>
-        <Route path="/" exact> <Tchat /></Route>
+        <Route path="/tchat" > <Tchat /></Route>
       </switch>  
     </div>
   );
